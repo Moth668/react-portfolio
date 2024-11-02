@@ -5,7 +5,7 @@ import Navigation from './Navigation';
 const Header: React.FC = () => {
     return (
       <header>
-        <h1>Your Portfolio Name</h1>
+        <h1>Tim Rice.</h1>
         <Navigation />
       </header>
     );

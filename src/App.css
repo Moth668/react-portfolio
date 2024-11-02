@@ -1,0 +1,52 @@
+/* src/styles/Portfolio.css */
+.portfolio {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .project {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    max-width: 300px;
+    text-align: left;
+    transition: transform 0.2s;
+  }
+  
+  .project:hover {
+    transform: scale(1.05);
+  }
+  
+  .project-image {
+    width: 100%;
+    border-radius: 4px;
+  }
+  
+  .project-title {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+  }
+  
+  .project-description {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .project-link:hover {
+    text-decoration: underline;
+  }
+  
