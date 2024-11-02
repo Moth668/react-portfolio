@@ -9,33 +9,38 @@
 // export default Message;
 
 // src/pages/Portfolio.tsx
-import React from 'react';
-import Project from '../components/Project';
+import React from "react";
+import Project from "../components/Project";
 
 const Portfolio: React.FC = () => {
   return (
-    <section className="portfolio">
-      <h2>My Projects</h2>
-      <div className="project-list">
-        <Project
-          title="Project One"
-          description="This is the first project. It does amazing things."
-          imageUrl="path/to/image1.jpg"
-          projectUrl="https://link-to-project-one.com"
-        />
-        <Project
-          title="Project Two"
-          description="This is the second project. It does even more amazing things."
-          imageUrl="path/to/image2.jpg"
-          projectUrl="https://link-to-project-two.com"
-        />
-        <Project
-          title="Project Three"
-          description="This is the third project. It's the most amazing of all."
-          imageUrl="path/to/image3.jpg"
-          projectUrl="https://link-to-project-three.com"
-        />
-        {/* Add more Project components as needed */}
+    <section className="container my-5">
+      <h2 className="text-center mb-5">My Projects</h2>
+      <div className="row">
+        <div className="col-md-4">
+          <Project
+            title="Project One"
+            description="This is the first project. It does amazing things."
+            imageUrl="path/to/image1.jpg"
+            projectUrl="https://link-to-project-one.com"
+          />
+        </div>
+        <div className="col-md-4">
+          <Project
+            title="Project Two"
+            description="This is the second project. It does even more amazing things."
+            imageUrl="path/to/image2.jpg"
+            projectUrl="https://link-to-project-two.com"
+          />
+        </div>
+        <div className="col-md-4">
+          <Project
+            title="Project Three"
+            description="This is the third project. It's the most amazing of all."
+            imageUrl="path/to/image3.jpg"
+            projectUrl="https://link-to-project-three.com"
+          />
+        </div>
       </div>
     </section>
   );
