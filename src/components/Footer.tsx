@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
           {/* <li><a href="https://linkedin.com/in/yourusername">LinkedIn</a></li> */}
           <li><a href="mailto:tdrice668@gmail.com">Email</a></li>
         </ul>
-        <p>© 2024 Your Name. All Rights Reserved.</p>
+        <p>© 2024 Moth668. All Rights Reserved.</p>
       </footer>
     );
   };
