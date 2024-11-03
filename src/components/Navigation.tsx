@@ -1,6 +1,6 @@
 // src/components/Navigation.tsx
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Navigation: React.FC = () => {
   return (
@@ -42,6 +42,11 @@ const Navigation: React.FC = () => {
                 Contact
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/weather">
+                Weather
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
@@ -50,4 +55,3 @@ const Navigation: React.FC = () => {
 };
 
 export default Navigation;
-
