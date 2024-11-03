@@ -19,50 +19,50 @@ const Portfolio: React.FC = () => {
       <div className="row">
         <div className="col-md-4">
           <Project
-            title="Project One"
-            description="This is the first project. It does amazing things."
+            title="Workforce-Wiz"
+            description="This was an assignment during bootcamp to create an employee database with a terminal interface."
             imageUrl="/workforce-wiz-screenshot.png"
-            projectUrl="https://link-to-project-one.com"
+            projectUrl="https://github.com/Moth668/workforce-wiz"
           />
         </div>
         <div className="col-md-4">
           <Project
-            title="Project Two"
-            description="This is the second project. It does even more amazing things."
-            imageUrl="path/to/image2.jpg"
-            projectUrl="https://link-to-project-two.com"
+            title="Towmato"
+            description="This was an assignment during bootcamp to create a terminal user interface."
+            imageUrl="/towmato_screenshot.png"
+            projectUrl="https://github.com/Moth668/towmato"
           />
         </div>
         <div className="col-md-4">
           <Project
-            title="Project Three"
-            description="This is the third project. It's the most amazing of all."
-            imageUrl="path/to/image3.jpg"
-            projectUrl="https://link-to-project-three.com"
+            title="Markdown-Master"
+            description="This was an assignment during bootcamp to create a README.md file generator."
+            imageUrl="/markdown_master_screenshot.png"
+            projectUrl="https://github.com/Moth668/markdown-master"
           />
         </div>
         <div className="col-md-4">
           <Project
-            title="Project Four"
-            description="This is the fourth project. It's the most amazing of all."
-            imageUrl="path/to/image3.jpg"
-            projectUrl="https://link-to-project-three.com"
+            title="Prework Study Guide"
+            description="This was a prerequisite to the bootcamp. My first ever deployed project."
+            imageUrl="/preworkstudyguide.png"
+            projectUrl="https://github.com/Moth668/prework-study-guide"
           />
         </div>
         <div className="col-md-4">
           <Project
-            title="Project Five"
-            description="This is the fifth project. It's the most amazing of all."
-            imageUrl="path/to/image3.jpg"
-            projectUrl="https://link-to-project-three.com"
+            title="Color My World"
+            description="This color generator was the first group project that I participated in during bootcamp."
+            imageUrl="/color_my_world_screenshot.png"
+            projectUrl="https://github.com/mmcgarry13/Color-My-World"
           />
         </div>
         <div className="col-md-4">
           <Project
-            title="Project Six"
-            description="This is the sixth project. It's the most amazing of all."
-            imageUrl="path/to/image3.jpg"
-            projectUrl="https://link-to-project-three.com"
+            title="Distraction"
+            description="I created his time management game to maintain productivity and focus."
+            imageUrl="/distraction_screenshot.png"
+            projectUrl="https://github.com/Moth668/distraction"
           />
         </div>
       </div>
