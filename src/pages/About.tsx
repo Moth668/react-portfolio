@@ -9,7 +9,7 @@ import React from "react";
 
 const About: React.FC = () => {
   return (
-    <section className="container my-5">
+    <section className="container my-5 pb-5">
       <div className="row">
         <div className="col-md-6">
           <img
@@ -18,13 +18,6 @@ const About: React.FC = () => {
             className="img-fluid rounded-circle mb-4"
           />
         </div>
-        {/* <div className="p-5 bg-light rounded-3">
-          <h2>Welcome to My Portfolio</h2>
-          <p>
-            This is a simple hero unit, a simple jumbotron-style component for
-            calling extra attention to featured content or information.
-          </p>
-        </div> */}
 
         <div className="col-md-6">
           <h2 className="mb-4">About Me</h2>
@@ -45,13 +38,6 @@ const About: React.FC = () => {
             contributing to open source, or enjoying outdoor activities.
           </p>
         </div>
-        {/* <a
-          href="path/to/your-resume.pdf"
-          className="btn btn-primary mt-3"
-          download
-        >
-          Download My Resume
-        </a> */}
       </div>
     </section>
   );
