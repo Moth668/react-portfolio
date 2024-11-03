@@ -41,6 +41,30 @@ const Portfolio: React.FC = () => {
             projectUrl="https://link-to-project-three.com"
           />
         </div>
+        <div className="col-md-4">
+          <Project
+            title="Project Four"
+            description="This is the fourth project. It's the most amazing of all."
+            imageUrl="path/to/image3.jpg"
+            projectUrl="https://link-to-project-three.com"
+          />
+        </div>
+        <div className="col-md-4">
+          <Project
+            title="Project Five"
+            description="This is the fifth project. It's the most amazing of all."
+            imageUrl="path/to/image3.jpg"
+            projectUrl="https://link-to-project-three.com"
+          />
+        </div>
+        <div className="col-md-4">
+          <Project
+            title="Project Six"
+            description="This is the sixth project. It's the most amazing of all."
+            imageUrl="path/to/image3.jpg"
+            projectUrl="https://link-to-project-three.com"
+          />
+        </div>
       </div>
     </section>
   );
