@@ -2,7 +2,7 @@ function Home() {
   // JSX: JavaScript XML
   return (
     <div
-      className="container mt-5 p-4 pb-5 rounded"
+      className="container mt-5 p-4 pb-5 rounded min-vh-100 d-flex flex-column justify-content-between"
       style={{
         backgroundColor: "var(--light-gray)",
         color: "var(--deep-navy)",
