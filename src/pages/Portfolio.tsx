@@ -4,7 +4,7 @@ import Project from "../components/Project";
 
 const Portfolio: React.FC = () => {
   return (
-    <section className="container my-5 pb-5">
+    <section className="container my-5">
       <h2 className="text-center mb-5">My Projects</h2>
       <div className="row justify-content-center">
         <div className="col-md-4 mb-4 d-flex align-items-stretch">

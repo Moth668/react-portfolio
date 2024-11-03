@@ -268,8 +268,8 @@ a:hover {
 
 /* Project card styling */
 .project-card {
-  background-color: var(--deep-navy);
-  color: var(--white);
+  background-color: var(--light-gray);
+  color: var(--deep-navy);
   border: none;
   border-radius: 8px;
   height: 100%; /* Ensures the card stretches to fill its container */
