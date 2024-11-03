@@ -1,14 +1,15 @@
-// src/components/Header.jsx
+// src/components/Header.tsx
 import React from 'react';
 import Navigation from './Navigation';
 
 const Header: React.FC = () => {
-    return (
-      <header>
-        <h1>Tim Rice.</h1>
+  return (
+    <header className="bg-light py-3 mb-4">
+      <div className="container">
         <Navigation />
-      </header>
-    );
-  };
-  
-  export default Header;
+      </div>
+    </header>
+  );
+};
+
+export default Header;
