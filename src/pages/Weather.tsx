@@ -15,6 +15,8 @@ const Weather: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
 
   const API_KEY = process.env.REACT_APP_OPENWEATHER_API_KEY;
+  // const VITE_API_KEY = process.env.VITE_OPENWEATHER_API_KEY;
+
 
   useEffect(() => {
     const fetchWeather = async () => {
@@ -38,6 +40,7 @@ const Weather: React.FC = () => {
         setError(
           "Failed to fetch weather data. Please check your API key or city name."
         );
+        console.log("API Key:", API_KEY);
       }
     };
 
