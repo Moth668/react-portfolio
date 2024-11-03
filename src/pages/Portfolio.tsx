@@ -60,7 +60,7 @@ const Portfolio: React.FC = () => {
         <div className="col-md-4">
           <Project
             title="Distraction"
-            description="I created his time management game to maintain productivity and focus."
+            description="I created this time management game to maintain productivity and focus."
             imageUrl="/distraction_screenshot.png"
             projectUrl="https://github.com/Moth668/distraction"
           />
