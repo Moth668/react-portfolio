@@ -1,6 +1,6 @@
 // src/pages/Weather.tsx
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 interface WeatherData {
   date: string;
@@ -11,20 +11,37 @@ interface WeatherData {
 
 const Weather: React.FC = () => {
   const [forecast, setForecast] = useState<WeatherData[]>([]);
-  const [city, setCity] = useState("Yokohama"); // Default city
+  const [city, setCity] = useState('New York'); // Default city
   const [error, setError] = useState<string | null>(null);
 
   const API_KEY = process.env.VITE_OPENWEATHER_API_KEY;
-  console.log("API Key:", API_KEY); // This should now log your API key
 
   useEffect(() => {
-    const fetchWeather = async () => {
+    const fetchCoordinatesAndWeather = async () => {
+      if (!API_KEY) {
+        setError('API Key is missing. Please check your environment variables.');
+        return;
+      }
+
       try {
-        const response = await axios.get(
-          `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${API_KEY}`
+        // Fetch coordinates from the Geocoding API
+        const geoResponse = await axios.get(
+          `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${API_KEY}`
         );
 
-        const forecastData = response.data.list
+        if (geoResponse.data.length === 0) {
+          setError('City not found. Please enter a valid city name.');
+          return;
+        }
+
+        const { lat, lon } = geoResponse.data[0];
+
+        // Fetch weather data using the coordinates
+        const weatherResponse = await axios.get(
+          `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`
+        );
+
+        const forecastData = weatherResponse.data.list
           .filter((item: any, index: number) => index % 8 === 0) // Get one forecast per day
           .map((item: any) => ({
             date: item.dt_txt,
@@ -36,13 +53,11 @@ const Weather: React.FC = () => {
         setForecast(forecastData);
         setError(null);
       } catch (err) {
-        setError(
-          "Failed to fetch weather data. Please check your API key or city name."
-        );
+        setError('Failed to fetch weather data. Please check the city name and try again.');
       }
     };
 
-    fetchWeather();
+    fetchCoordinatesAndWeather();
   }, [city, API_KEY]);
 
   return (
@@ -65,15 +80,9 @@ const Weather: React.FC = () => {
         {forecast.map((day, index) => (
           <div className="col-md-2 mb-3" key={index}>
             <div className="card text-center">
-              <img
-                src={day.icon}
-                alt={day.description}
-                className="card-img-top"
-              />
+              <img src={day.icon} alt={day.description} className="card-img-top" />
               <div className="card-body">
-                <h5 className="card-title">
-                  {new Date(day.date).toLocaleDateString()}
-                </h5>
+                <h5 className="card-title">{new Date(day.date).toLocaleDateString()}</h5>
                 <p className="card-text">
                   {day.temperature}°C
                   <br />
