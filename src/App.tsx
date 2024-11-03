@@ -15,6 +15,7 @@ const App: React.FC = () => {
 
   return (
     <Router>
+      <div className="d-flex flex-column min-vh-100">
       <div
         className={
           theme === "dark" ? "bg-dark text-white" : "bg-light text-dark"
@@ -31,6 +32,7 @@ const App: React.FC = () => {
           </Routes>
         </main>
         <Footer />
+      </div>
       </div>
     </Router>
   );
