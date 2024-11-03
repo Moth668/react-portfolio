@@ -2,13 +2,13 @@ function Home() {
   // JSX: JavaScript XML
   return (
     <div
-      className="container mt-5 p-4 rounded"
+      className="container mt-5 p-4 pb-5 rounded"
       style={{
         backgroundColor: "var(--light-gray)",
         color: "var(--deep-navy)",
       }}
     >
-      <h1 className="display-4 text-center mb-4 pb-5">Welcome to My Portfolio</h1>
+      <h1 className="display-4 text-center mb-4">Welcome to My Portfolio</h1>
       <p className="lead text-center">
         Hi, I'm Tim Rice—a passionate software developer driven by a love for
         crafting dynamic and efficient web applications. Specializing in
