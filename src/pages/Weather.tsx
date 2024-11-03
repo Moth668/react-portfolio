@@ -11,10 +11,10 @@ interface WeatherData {
 
 const Weather: React.FC = () => {
   const [forecast, setForecast] = useState<WeatherData[]>([]);
-  const [city, setCity] = useState('New York'); // Default city
+  const [city, setCity] = useState('Yokohama'); // Default city
   const [error, setError] = useState<string | null>(null);
 
-  const API_KEY = process.env.VITE_OPENWEATHER_API_KEY;
+  const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
 
   useEffect(() => {
     const fetchCoordinatesAndWeather = async () => {
@@ -42,8 +42,8 @@ const Weather: React.FC = () => {
         );
 
         const forecastData = weatherResponse.data.list
-          .filter((item: any, index: number) => index % 8 === 0) // Get one forecast per day
-          .map((item: any) => ({
+          .filter((item: { dt_txt: string }, index: number) => index % 8 === 0) // Get one forecast per day
+          .map((item: { dt_txt: string; main: { temp: number }; weather: { description: string; icon: string }[] }) => ({
             date: item.dt_txt,
             temperature: item.main.temp,
             description: item.weather[0].description,
