@@ -1,9 +1,15 @@
 // src/components/Footer.tsx
 import React from "react";
+import { useTheme } from "../context/ThemeContext";
 
 const Footer: React.FC = () => {
+  const { theme } = useTheme();
   return (
-    <footer className="bg-dark text-white text-center py-3">
+    <footer
+      className={`footer p-3 text-center ${
+        theme === "light" ? "footer-light" : "footer-dark"
+      }`}
+    >
       <a
         href="path/to/your-resume.pdf"
         className="btn btn-primary mt-3 mb-3"
@@ -15,25 +21,25 @@ const Footer: React.FC = () => {
         <li className="list-inline-item">
           <a
             href="https://github.com/Moth668/react-portfolio"
-            className="text-white"
+            className="contact-link"
           >
             GitHub
           </a>
         </li>
         <li className="list-inline-item">
-          <a href="https://dev.to/moth668" className="text-white">
+          <a href="https://dev.to/moth668" className="contact-link">
             DEV
           </a>
         </li>
         <li className="list-inline-item">
-          <a href="mailto:youremail@example.com" className="text-white">
+          <a href="mailto:youremail@example.com" className="contact-link">
             Email
           </a>
         </li>
         <li className="list-inline-item">
           <a
             href="https://www.linkedin.com/in/realtortimrice/"
-            className="text-white"
+            className="contact-link"
           >
             LinkedIn
           </a>

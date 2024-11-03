@@ -1,55 +1,57 @@
 // src/components/Navigation.tsx
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { useTheme } from '../context/ThemeContext';
 
 const Navigation: React.FC = () => {
+  const { theme } = useTheme();
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
-          Tim Rice.
-        </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <Link className="nav-link" to="/">
-                Home
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/about">
-                About
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/portfolio">
-                Portfolio
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/contact">
-                Contact
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/weather">
-                Weather
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <nav
+      className={`navbar d-flex justify-content-around p-3 ${
+        theme === 'light' ? 'navbar-light' : 'navbar-dark'
+      }`}
+    >
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+          isActive ? 'nav-link active-link' : 'nav-link'
+        }
+      >
+        Home
+      </NavLink>
+      <NavLink
+        to="/about"
+        className={({ isActive }) =>
+          isActive ? 'nav-link active-link' : 'nav-link'
+        }
+      >
+        About
+      </NavLink>
+      <NavLink
+        to="/portfolio"
+        className={({ isActive }) =>
+          isActive ? 'nav-link active-link' : 'nav-link'
+        }
+      >
+        Portfolio
+      </NavLink>
+      <NavLink
+        to="/contact"
+        className={({ isActive }) =>
+          isActive ? 'nav-link active-link' : 'nav-link'
+        }
+      >
+        Contact
+      </NavLink>
+      <NavLink
+        to="/weather"
+        className={({ isActive }) =>
+          isActive ? 'nav-link active-link' : 'nav-link'
+        }
+      >
+        Weather
+      </NavLink>
     </nav>
   );
 };

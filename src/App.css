@@ -1,3 +1,50 @@
+/* src/App.css */
+:root {
+  --black: #000000;
+  --deep-navy: #14213d;
+  --orange-accent: #fca311;
+  --light-gray: #e5e5e5;
+  --white: #ffffff;
+}
+
+/* src/App.css */
+body, .header-light, .header-dark, .btn-theme-light, .btn-theme-dark {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* Existing styles */
+body {
+  background-color: var(--light-gray);
+  color: var(--deep-navy);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Additional styles */
+a {
+  color: var(--orange-accent);
+}
+
+a:hover {
+  color: var(--black);
+}
+
+/* Include your Portfolio styles */
+.portfolio {
+  padding: 2rem;
+  text-align: center;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Rest of your Portfolio styles... */
+
+
 /* src/styles/Portfolio.css */
 .portfolio {
     padding: 2rem;
@@ -42,11 +89,204 @@
   .project-link {
     display: inline-block;
     margin-top: 1rem;
-    color: #007bff;
+    color: var(--orange-accent);
     text-decoration: none;
   }
   
   .project-link:hover {
     text-decoration: underline;
   }
-  
+
+  /* src/App.css */
+.header-light {
+  background-color: var(--light-gray);
+  color: var(--black);
+}
+
+.header-dark {
+  background-color: var(--deep-navy);
+  color: var(--white);
+}
+
+.btn-theme-light {
+  background-color: var(--orange-accent);
+  color: var(--white);
+}
+
+.btn-theme-dark {
+  background-color: var(--orange-accent);
+  color: var(--white);
+}
+
+/* src/App.css */
+
+/* Override Bootstrap Button Styles */
+.btn, .btn-primary, .btn-secondary, .btn-success, .btn-danger, .btn-warning, .btn-info, .btn-light, .btn-dark {
+  background-color: var(--orange-accent) !important; /* Custom orange background */
+  color: var(--white) !important; /* White text */
+  border: none !important; /* Remove default borders */
+  padding: 0.5rem 1rem; /* Adjust padding for consistency */
+  border-radius: 5px; /* Rounded corners for a modern look */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.btn:hover, .btn-primary:hover, .btn-secondary:hover, .btn-success:hover, .btn-danger:hover, .btn-warning:hover, .btn-info:hover, .btn-light:hover, .btn-dark:hover {
+  background-color: var(--deep-navy) !important; /* Deep navy on hover */
+  color: var(--white) !important; /* Keep text white */
+  transform: scale(1.05);
+}
+
+
+/* src/App.css */
+
+/* Navigation Bar Styling */
+.navbar {
+  background-color: var(--deep-navy); /* Same background as the header */
+  color: var(--white); /* White text */
+  border-bottom: 2px solid var(--orange-accent); /* Optional border for emphasis */
+}
+
+/* Link Styling */
+.nav-link {
+  color: var(--white); /* White text for links */
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--orange-accent); /* Orange color on hover */
+  transform: scale(1.05);
+}
+
+/* Active Link Styling */
+.active-link {
+  color: var(--orange-accent); /* Orange color for active link */
+  border-bottom: 2px solid var(--orange-accent); /* Underline to indicate active tab */
+}
+
+  /* src/App.css */
+
+/* Light Mode Navigation */
+.navbar-light {
+  background-color: var(--light-gray);
+  color: var(--black);
+}
+
+.navbar-light .nav-link {
+  color: var(--black);
+}
+
+.navbar-light .nav-link:hover {
+  color: var(--orange-accent);
+}
+
+/* Dark Mode Navigation */
+.navbar-dark {
+  background-color: var(--deep-navy);
+  color: var(--white);
+}
+
+.navbar-dark .nav-link {
+  color: var(--white);
+}
+
+.navbar-dark .nav-link:hover {
+  color: var(--orange-accent);
+}
+
+
+/* src/App.css */
+
+/* Light Mode Footer */
+.footer-light {
+  background-color: var(--light-gray);
+  color: var(--black);
+  border-top: 2px solid var(--orange-accent); /* Optional accent border */
+}
+
+/* Dark Mode Footer */
+.footer-dark {
+  background-color: var(--deep-navy);
+  color: var(--white);
+  border-top: 2px solid var(--orange-accent); /* Optional accent border */
+}
+
+/* src/App.css */
+
+/* Contact link styling */
+.contact-link {
+  color: var(--orange-accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-link:hover {
+  color: var(--white); /* Change to white or another contrasting color for better visibility */
+  text-decoration: underline;
+}
+
+/* src/App.css */
+
+/* Footer contact link styling */
+.footer .contact-link {
+  color: var(--orange-accent); /* Orange color for links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer .contact-link:hover {
+  color: var(--white); /* White color on hover */
+  text-decoration: underline; /* Underline on hover for emphasis */
+}
+
+/* src/App.css */
+
+/* Weather card styling */
+.card {
+  border: none;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
+
+/* src/App.css */
+
+/* Project card styling */
+.project-card {
+  background-color: var(--deep-navy);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  height: 100%; /* Ensures the card stretches to fill its container */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Evenly distributes content */
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
