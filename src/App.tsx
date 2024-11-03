@@ -1,18 +1,21 @@
 // src/App.tsx
-import React from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Portfolio from "./pages/Portfolio";
-import Contact from "./pages/Contact";
-import Weather from "./pages/Weather";
+import React from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import Portfolio from './pages/Portfolio';
+import Contact from './pages/Contact';
+import Weather from './pages/Weather';
+import { useTheme } from './context/ThemeContext';
 
 const App: React.FC = () => {
+  const { theme } = useTheme();
+
   return (
     <Router>
-      <div className="d-flex flex-column min-vh-100">
+      <div className={theme === 'dark' ? 'bg-dark text-white' : 'bg-light text-dark'}>
         <Header />
         <main className="flex-grow-1">
           <Routes>
