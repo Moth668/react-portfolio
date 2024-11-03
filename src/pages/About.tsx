@@ -21,22 +21,33 @@ const About: React.FC = () => {
 
         <div className="col-md-6">
           <h2 className="mb-4">About Me</h2>
-          <p className="lead">
-            Hello! I'm Tim Rice, a passionate software developer with a love for
-            creating interactive and efficient web applications. I specialize in
-            front-end and full-stack development, and I am always eager to learn
-            and implement the latest technologies.
-          </p>
-          <p>
-            Over the years, I've worked on various projects that have helped me
-            hone my skills in JavaScript, React, TypeScript, and more. I enjoy
-            problem-solving and bringing ideas to life through clean, efficient,
-            and maintainable code.
-          </p>
-          <p>
-            When I am not coding, you can find me exploring new technologies,
-            contributing to open source, or enjoying outdoor activities.
-          </p>
+          <div className="lead">
+            <p>
+              I'm a dedicated husband and proud father, driven by a passion for
+              coding and a love for life’s adventures. When I am not immersed in
+              writing code, you can find me fishing, hiking, tackling DIY
+              projects, or engaging in epic Fortnite battles with my family. I am
+              also a long-time OSRS enthusiast and enjoy
+              restoring our 1991 Nissan 300ZX, embracing the challenges and
+              rewards of every turn. With an optimistic spirit and a versatile
+              skill set, I like to think of myself as a true jack of all trades.
+            </p>{" "}
+            <p>
+              My journey into software development has been fueled by a
+              curiosity for problem-solving and the joy of bringing ideas to
+              life through clean, efficient, and maintainable code. I've honed
+              my skills through diverse projects, specializing in JavaScript,
+              React, TypeScript, and more, and I thrive on the opportunity to
+              learn and grow with every new challenge.
+            </p>{" "}
+            <p>
+              Before diving into tech, I built a rich career in management,
+              customer service, and sales, spending much of my professional life
+              in the world of automotive repair. These experiences have not only
+              shaped my work ethic but also instilled in me a deep appreciation
+              for teamwork, communication, and a commitment to excellence.
+            </p>
+          </div>
         </div>
       </div>
     </section>
