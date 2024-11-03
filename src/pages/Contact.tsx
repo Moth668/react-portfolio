@@ -14,7 +14,7 @@ function Contact() {
         color: theme === "light" ? "var(--deep-navy)" : "var(--white)",
       }}
     >
-      <h1 className="display-4 text-center mb-4">Get in Touch</h1>
+      <h1 className="display-4 text-center mb-4 pb-5">Get in Touch</h1>
       <p className="lead text-center">
         I'm always open to discussing new opportunities, exciting projects, or
         ways I can contribute to your team. Feel free to reach out if you’d like
