@@ -21,7 +21,7 @@ const Portfolio: React.FC = () => {
           <Project
             title="Project One"
             description="This is the first project. It does amazing things."
-            imageUrl="path/to/image1.jpg"
+            imageUrl="/workforce-wiz-screenshot.png"
             projectUrl="https://link-to-project-one.com"
           />
         </div>
