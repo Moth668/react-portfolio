@@ -13,7 +13,7 @@ const About: React.FC = () => {
       <div className="row">
         <div className="col-md-6">
           <img
-            src="path/to/your-profile-image.jpg"
+            src="src\assets\T&A Picture.jpg"
             alt="profile picture of Tim Rice"
             className="img-fluid rounded-circle mb-4"
           />

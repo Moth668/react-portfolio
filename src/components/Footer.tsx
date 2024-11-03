@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-dark text-white text-center py-3 fixed-bottom">
+    <footer className="bg-dark text-white text-center py-3">
       <a
         href="path/to/your-resume.pdf"
         className="btn btn-primary mt-3 mb-3"
