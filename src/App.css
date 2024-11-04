@@ -237,9 +237,6 @@ a:hover {
   color: var(--orange-accent);
 }
 
-
-/* src/App.css */
-
 /* Light Mode Footer */
 .footer-light {
   background-color: var(--light-gray);

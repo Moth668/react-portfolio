@@ -12,10 +12,11 @@ const Navigation: React.FC = () => {
         theme === "light" ? "header-light" : "header-dark"
       }`}
     >
-            
       {/* Hamburger menu button */}
       <button
-        className="navbar-toggler"
+        className={`navbar-toggler ${
+          theme === "light" ? "navbar-light bg-light" : "navbar-dark bg-dark"
+        }`}
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarNav"
