@@ -52,7 +52,7 @@ const Weather: React.FC = () => {
               weather: { description: string; icon: string }[];
             }) => ({
               date: item.dt_txt,
-              temperature: item.main.temp,
+              temperature: item.main.temp * (9 / 5) + 32, // Convert to Fahrenheit
               description: item.weather[0].description,
               icon: `http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`,
             })
@@ -103,7 +103,7 @@ const Weather: React.FC = () => {
               {new Date(day.date).toLocaleDateString()}
             </h5>
             <p className="card-text">
-              {day.temperature}°C
+              {Math.round(day.temperature)}°F
               <br />
               {day.description}
             </p>
