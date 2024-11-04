@@ -21,7 +21,7 @@ const App: React.FC = () => {
         }`}
       >
         <Header />
-        <main className="flex-grow-1">
+        <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
