@@ -136,24 +136,26 @@ a:hover {
   /* src/App.css */
 .header-light {
   background-color: var(--light-gray);
-  color: var(--black);
+  color: var(--orange-accent);
   border-bottom: 2px solid var(--orange-accent);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .header-dark {
   background-color: var(--deep-navy);
-  color: var(--white);
+  color: var(--orange-accent);
   border-bottom: 2px solid var(--orange-accent);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .btn-theme-light {
   background-color: var(--orange-accent);
-  color: var(--white);
+  color: var(--deep-navy);
 }
 
 .btn-theme-dark {
   background-color: var(--orange-accent);
-  color: var(--white);
+  color: var(--deep-navy);
 }
 
 /* src/App.css */
@@ -161,7 +163,7 @@ a:hover {
 /* Override Bootstrap Button Styles */
 .btn, .btn-primary, .btn-secondary, .btn-success, .btn-danger, .btn-warning, .btn-info, .btn-light, .btn-dark {
   background-color: var(--orange-accent) !important; /* Custom orange background */
-  color: var(--white) !important; /* White text */
+  color: var(--deep-navy) !important; /* White text */
   border: none !important; /* Remove default borders */
   padding: 0.5rem 1rem; /* Adjust padding for consistency */
   border-radius: 5px; /* Rounded corners for a modern look */
@@ -180,14 +182,14 @@ a:hover {
 
 /* Navigation Bar Styling */
 .navbar {
-  background-color: var(--deep-navy); /* Same background as the header */
-  color: var(--white); /* White text */
-  /* border-bottom: 2px solid var(--orange-accent); Optional border for emphasis */
+  background-color: transparent; /* Or keep your desired background */
+  border-bottom: none; /* Remove border from the navbar */
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* Link Styling */
 .nav-link {
-  color: var(--white); /* White text for links */
+  color: var(--orange-accent); /* White text for links */
   text-decoration: none;
   font-size: 1rem;
   padding: 0.5rem 1rem;
@@ -195,7 +197,7 @@ a:hover {
 }
 
 .nav-link:hover {
-  color: var(--orange-accent); /* Orange color on hover */
+  color: var(--white); /* Orange color on hover */
   transform: scale(1.05);
 }
 
@@ -210,11 +212,11 @@ a:hover {
 /* Light Mode Navigation */
 .navbar-light {
   background-color: var(--light-gray);
-  color: var(--black);
+  color: var(--orange-accent);
 }
 
 .navbar-light .nav-link {
-  color: var(--black);
+  color: var(--orange-accent);
 }
 
 .navbar-light .nav-link:hover {
@@ -224,11 +226,11 @@ a:hover {
 /* Dark Mode Navigation */
 .navbar-dark {
   background-color: var(--deep-navy);
-  color: var(--white);
+  color: var(--orange-accent);
 }
 
 .navbar-dark .nav-link {
-  color: var(--white);
+  color: var(--orange-accent);
 }
 
 .navbar-dark .nav-link:hover {
