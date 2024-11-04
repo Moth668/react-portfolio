@@ -9,44 +9,74 @@ const Navigation: React.FC = () => {
   return (
     <nav
       className={`navbar navbar-expand-lg ${
-        theme === "light" ? "navbar-light bg-light" : "navbar-dark bg-dark"
+        theme === "light" ? "header-light" : "header-dark"
       }`}
     >
+      {/* Hamburger menu button */}
       <button
-        className="navbar-toggler"
+        className={`navbar-toggler ${
+          theme === "light" ? "navbar-light bg-light" : "navbar-dark bg-dark"
+        }`}
         type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
         aria-controls="navbarNav"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
         <span className="navbar-toggler-icon"></span>
       </button>
+
+      {/* Collapsible content */}
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <NavLink to="/" className="nav-link">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "nav-link active-link" : "nav-link"
+              }
+            >
               Home
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/about" className="nav-link">
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive ? "nav-link active-link" : "nav-link"
+              }
+            >
               About
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/portfolio" className="nav-link">
+            <NavLink
+              to="/portfolio"
+              className={({ isActive }) =>
+                isActive ? "nav-link active-link" : "nav-link"
+              }
+            >
               Portfolio
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/contact" className="nav-link">
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                isActive ? "nav-link active-link" : "nav-link"
+              }
+            >
               Contact
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/weather" className="nav-link">
+            <NavLink
+              to="/weather"
+              className={({ isActive }) =>
+                isActive ? "nav-link active-link" : "nav-link"
+              }
+            >
               Weather
             </NavLink>
           </li>
