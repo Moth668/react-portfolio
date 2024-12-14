@@ -17,14 +17,19 @@ function Contact() {
       <h1 className="display-4 text-center mb-4">Get in Touch</h1>
       <p className="lead text-center">
         I am always open to discussing new opportunities, exciting projects, or
-        ways I can contribute to your team. Feel free to reach out if you would like
-        to connect or learn more about my work!
+        ways I can contribute to your team. Feel free to reach out if you would
+        like to connect or learn more about my work!
       </p>
       <div className="text-center mt-4">
         <p>
 
           <strong>Email:</strong>{" "}
-          <a href="mailto:timothydavidrice@gmail.com" className="contact-link">
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=timothydavidrice@gmail.com&su=Portfolio%20Inquiry&body=Hi,%20I%20am%20impressed%20with%20your%20work!"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-link"
+          >
             timothydavidrice@gmail.com
           </a>
         </p>

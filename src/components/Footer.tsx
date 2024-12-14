@@ -32,7 +32,12 @@ const Footer: React.FC = () => {
           </a>
         </li>
         <li className="list-inline-item">
-          <a href="mailto:timothydavidrice@gmail.com" className="contact-link">
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=timothydavidrice@gmail.com&su=Portfolio%20Inquiry&body=Hi,%20I%20am%20impressed%20with%20your%20work!"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-link"
+          >
             Email
           </a>
         </li>
