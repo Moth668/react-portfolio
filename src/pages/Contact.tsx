@@ -16,15 +16,16 @@ function Contact() {
     >
       <h1 className="display-4 text-center mb-4">Get in Touch</h1>
       <p className="lead text-center">
-        I'm always open to discussing new opportunities, exciting projects, or
+        I am always open to discussing new opportunities, exciting projects, or
         ways I can contribute to your team. Feel free to reach out if you would like
         to connect or learn more about my work!
       </p>
       <div className="text-center mt-4">
         <p>
-          <strong>Email: </strong>{" "}
-          <a href="mailto:tim@timothydavidrice.com" className="contact-link">
-            tim@timothydavidrice.com
+
+          <strong>Email:</strong>{" "}
+          <a href="mailto:timothydavidrice@gmail.com" className="contact-link">
+            timothydavidrice@gmail.com
           </a>
         </p>
         <p>
