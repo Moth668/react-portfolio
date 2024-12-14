@@ -11,9 +11,9 @@ const Footer: React.FC = () => {
       }`}
     >
       <a
-        href="src\assets\Tim-Rice-Resume2024.png"
+        href="/Tim_Rice_Resume.pdf"
         className="btn btn-primary mt-3 mb-3"
-        download
+        download="Tim_Rice_Resume.pdf"
       >
         Download My Resume
       </a>
