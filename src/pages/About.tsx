@@ -1,10 +1,3 @@
-// function Message() {
-//     return <h3>Hello World, I'm Tim. A husband, father of two, I enjoy fishing, hiking, DIY projects, playing Fortnite with my family, OSRS, restoring a 1991 Nissan 300zx. I'm an optimistic jack of all trades. </h3>;
-// }
-
-// export default Message;
-
-// src/pages/About.tsx
 import React from "react";
 
 const About: React.FC = () => {
@@ -23,9 +16,9 @@ const About: React.FC = () => {
           <h2 className="mb-4">About Me</h2>
           <div className="lead">
             <p>
-              I'm a dedicated husband and proud father, driven by a passion for
-              coding and a love for life’s adventures. When I am not immersed in
-              writing code, you can find me fishing, hiking, tackling DIY
+              I am a dedicated husband and proud father, driven by a passion for
+              development and a love for life’s adventures. When I am not immersed in
+              writing code, you can find me fishing, hiking, tackling construction
               projects, or engaging in epic Fortnite battles with my family. I am
               also a long-time OSRS enthusiast and enjoy
               restoring our 1991 Nissan 300ZX, embracing the challenges and
@@ -37,7 +30,7 @@ const About: React.FC = () => {
               curiosity for problem-solving and the joy of bringing ideas to
               life through clean, efficient, and maintainable code. I've honed
               my skills through diverse projects, specializing in JavaScript,
-              React, TypeScript, and more, and I thrive on the opportunity to
+              React, TypeScript, and more. I thrive on the opportunity to
               learn and grow with every new challenge.
             </p>{" "}
             <p>

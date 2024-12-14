@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
       }`}
     >
       <a
-        href="path/to/your-resume.pdf"
+        href="src\assets\Tim-Rice-Resume2024.png"
         className="btn btn-primary mt-3 mb-3"
         download
       >
@@ -32,13 +32,13 @@ const Footer: React.FC = () => {
           </a>
         </li>
         <li className="list-inline-item">
-          <a href="mailto:youremail@example.com" className="contact-link">
+          <a href="mailto:timothydavidrice@gmail.com" className="contact-link">
             Email
           </a>
         </li>
         <li className="list-inline-item">
           <a
-            href="https://www.linkedin.com/in/realtortimrice/"
+            href="https://www.linkedin.com/in/timothydavidrice/"
             className="contact-link"
           >
             LinkedIn

@@ -9,20 +9,12 @@ import { useState } from "react";
 interface ListGroupProps {
   items: string[];
   heading: string;
-  //   (item: string) => void
   onSelectItem: (item: string) => void;
 }
 
 function ListGroup({ items, heading, onSelectItem }: ListGroupProps) {
   // hook tells react that this data will change over time.
   const [selectedIndex, setSelectedIndex] = useState(-1);
-
-  //   items = [];
-
-  //   event handler
-  //   props are immutable, or unchangeable
-
-  // state is mutable, or changeable.
 
   return (
     <>
