@@ -20,7 +20,7 @@ const Header: React.FC = () => {
         }`}
         onClick={toggleTheme}
       >
-        {theme === "light" ? "Tim Rice." : "Tim Rice."}
+        {theme === "light" ? "Tim Rice" : "Tim Rice"}
       </button>
     </header>
   );
