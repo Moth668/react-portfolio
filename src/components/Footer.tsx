@@ -42,6 +42,14 @@ const Footer: React.FC = () => {
             LinkedIn
           </a>
         </li>
+        <li className="list-inline-item">
+          <a
+            href="https://www.youtube.com/@moth668"
+            className="contact-link"
+          >
+            YouTube
+          </a>
+        </li>
       </ul>
       <p>© 2024 Moth668. All Rights Reserved.</p>
     </footer>
