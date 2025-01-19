@@ -3,9 +3,8 @@ import React from "react";
 import Navigation from "./Navigation";
 import { useTheme } from "../context/ThemeContext";
 
-
 const Header: React.FC = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
     <header
@@ -14,14 +13,13 @@ const Header: React.FC = () => {
       }`}
     >
       <Navigation />
-      <button
-        className={`btn ${
-          theme === "light" ? "btn-theme-light" : "btn-theme-dark"
-        }`}
-        onClick={toggleTheme}
+      <a
+        href="/Tim_Rice_Resume.pdf"
+        className="btn btn-primary mt-3 mb-3"
+        download="Tim_Rice_Resume.pdf"
       >
-        {theme === "light" ? "Tim Rice" : "Tim Rice"}
-      </button>
+        Download My Resume
+      </a>
     </header>
   );
 };

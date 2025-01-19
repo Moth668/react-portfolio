@@ -10,13 +10,6 @@ const Footer: React.FC = () => {
         theme === "light" ? "footer-light" : "footer-dark"
       }`}
     >
-      <a
-        href="/Tim_Rice_Resume.pdf"
-        className="btn btn-primary mt-3 mb-3"
-        download="Tim_Rice_Resume.pdf"
-      >
-        Download My Resume
-      </a>
       <ul className="list-inline">
         <li className="list-inline-item">
           <a

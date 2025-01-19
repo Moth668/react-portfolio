@@ -33,10 +33,10 @@ const Portfolio: React.FC = () => {
         </div>
         <div className="col-md-4 mb-4 d-flex align-items-stretch">
           <Project
-            title="Prework Study Guide"
-            description="This was a prerequisite to the bootcamp. My first ever deployed project."
-            imageUrl="/preworkstudyguide.png"
-            projectUrl="https://moth668.github.io/prework-study-guide/"
+            title="HubHunter"
+            description="This is a GitHub profile candidate search program."
+            imageUrl="/hubhunter.png"
+            projectUrl="https://hubhunter-1.onrender.com/"
           />
         </div>
         <div className="col-md-4 mb-4 d-flex align-items-stretch">
