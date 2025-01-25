@@ -7,6 +7,8 @@
   --white: #ffffff;
 }
 
+
+
 /* src/App.css */
 body, .header-light, .header-dark, .btn-theme-light, .btn-theme-dark {
   transition: background-color 0.3s, color 0.3s;
@@ -328,39 +330,66 @@ a:hover {
   border-top-right-radius: 8px;
 }
 
-/* src/App.css */
+:root {
+  --bg-light: #ffffff;
+  --bg-dark: #1a1a1a;
+  --slider-light: #f0f0f0;
+  --slider-dark: #333333;
+  --toggle-light: #ffd700;
+  --toggle-dark: #00d1b2;
+}
 
-/* Weather card container */
-.weather-card {
-  width: 150px; /* Fixed width for all cards */
-  height: 250px; /* Fixed height for uniform size */
-  background-color: var(--deep-navy);
-  color: var(--white);
-  border-radius: 8px;
-  padding: 1rem;
+/* body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-light);
+  color: var(--bg-dark);
+  transition: background-color 0.3s ease, color 0.3s ease;
+} */
+
+/* body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--bg-light);
+} */
+
+.theme-toggle {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for a nice effect */
+  height: 100vh;
 }
 
-.weather-card:hover {
-  transform: scale(1.05);
+input[type="checkbox"] {
+  display: none;
 }
 
-.weather-card img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 0.5rem; /* Space between the image and text */
+.slider {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: var(--slider-light);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.weather-card .card-title {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--toggle-light);
+  border-radius: 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.weather-card .card-text {
-  font-size: 0.9rem;
+input[type="checkbox"]:checked + .slider {
+  background-color: var(--slider-dark);
+}
+
+input[type="checkbox"]:checked + .slider::before {
+  transform: translateX(30px);
+  background-color: var(--toggle-dark);
 }
