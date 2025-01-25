@@ -52,7 +52,7 @@ const Weather: React.FC = () => {
               weather: { description: string; icon: string }[];
             }) => ({
               date: item.dt_txt,
-              temperature: item.main.temp,
+              temperature: item.main.temp * (9 / 5) + 32, // Convert to Fahrenheit
               description: item.weather[0].description,
               icon: `http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`,
             })
@@ -97,34 +97,16 @@ const Weather: React.FC = () => {
       {/* Center the weather cards and add spacing */}
       <div className="d-flex justify-content-center flex-wrap gap-3">
         {forecast.map((day, index) => (
-          <div
-            className="col-md-2 mb-3 mx-2"
-            key={index}
-            style={{ maxWidth: "150px" }}
-          >
-            <div
-              className="card text-center"
-              style={{
-                backgroundColor: "var(--deep-navy)",
-                color: "var(--white)",
-              }}
-            >
-              <img
-                src={day.icon}
-                alt={day.description}
-                className="card-img-top"
-              />
-              <div className="card-body">
-                <h5 className="card-title">
-                  {new Date(day.date).toLocaleDateString()}
-                </h5>
-                <p className="card-text">
-                  {day.temperature}°C
-                  <br />
-                  {day.description}
-                </p>
-              </div>
-            </div>
+          <div className="weather-card" key={index}>
+            <img src={day.icon} alt={day.description} />
+            <h5 className="card-title">
+              {new Date(day.date).toLocaleDateString()}
+            </h5>
+            <p className="card-text">
+              {Math.round(day.temperature)}°F
+              <br />
+              {day.description}
+            </p>
           </div>
         ))}
       </div>

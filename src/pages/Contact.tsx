@@ -22,6 +22,7 @@ function Contact() {
       </p>
       <div className="text-center mt-4">
         <p>
+
           <strong>Email:</strong>{" "}
           <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=timothydavidrice@gmail.com&su=Portfolio%20Inquiry&body=Hi,%20I%20am%20impressed%20with%20your%20work!"
@@ -33,7 +34,7 @@ function Contact() {
           </a>
         </p>
         <p>
-          <strong>LinkedIn:</strong>{" "}
+          <strong>LinkedIn: </strong>{" "}
           <a
             href="https://www.linkedin.com/in/timothydavidrice/"
             target="_blank"
@@ -44,7 +45,7 @@ function Contact() {
           </a>
         </p>
         <p>
-          <strong>GitHub:</strong>{" "}
+          <strong>GitHub: </strong>{" "}
           <a
             href="https://github.com/Moth668"
             target="_blank"
@@ -52,6 +53,17 @@ function Contact() {
             className="contact-link"
           >
             github.com/Moth668
+          </a>
+          </p>
+          <p>
+          <strong>YouTube: </strong>{" "}
+          <a
+            href="https://www.youtube.com/@moth668"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-link"
+          >
+            youtube.com/@moth668
           </a>
         </p>
       </div>

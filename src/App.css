@@ -14,6 +14,42 @@ body, .header-light, .header-dark, .btn-theme-light, .btn-theme-dark {
   transition: background-color 0.3s, color 0.3s;
 }
 
+/* src/App.css */
+
+/* Make the entire app container a flexbox to manage layout */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0; 
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main content area should grow to fill available space */
+.main-content {
+  flex: 1;
+  padding-bottom: 3rem; 
+}
+
+/* Footer styling */
+.footer {
+  position: sticky; /* Fixes the footer at the bottom of the viewport */
+  bottom: 0; /* Anchors the footer to the bottom */
+  left: 0; /* Aligns the footer to the left edge */
+  width: 100%; /* Makes sure the footer spans the full width of the page */
+  background-color: var(--deep-navy); /* Adjust for your theme */
+  color: var(--white);
+  border-top: 2px solid var(--orange-accent); /* Accent border for styling */
+  padding: 1rem;
+  z-index: 1000; /* Keeps the footer on top of other content */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
 
 /* Existing styles */
 body {
@@ -102,22 +138,26 @@ a:hover {
   /* src/App.css */
 .header-light {
   background-color: var(--light-gray);
-  color: var(--black);
+  color: var(--orange-accent);
+  border-bottom: 2px solid var(--orange-accent);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .header-dark {
   background-color: var(--deep-navy);
-  color: var(--white);
+  color: var(--orange-accent);
+  border-bottom: 2px solid var(--orange-accent);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .btn-theme-light {
   background-color: var(--orange-accent);
-  color: var(--white);
+  color: var(--deep-navy);
 }
 
 .btn-theme-dark {
   background-color: var(--orange-accent);
-  color: var(--white);
+  color: var(--deep-navy);
 }
 
 /* src/App.css */
@@ -125,7 +165,7 @@ a:hover {
 /* Override Bootstrap Button Styles */
 .btn, .btn-primary, .btn-secondary, .btn-success, .btn-danger, .btn-warning, .btn-info, .btn-light, .btn-dark {
   background-color: var(--orange-accent) !important; /* Custom orange background */
-  color: var(--white) !important; /* White text */
+  color: var(--deep-navy) !important; /* White text */
   border: none !important; /* Remove default borders */
   padding: 0.5rem 1rem; /* Adjust padding for consistency */
   border-radius: 5px; /* Rounded corners for a modern look */
@@ -144,14 +184,14 @@ a:hover {
 
 /* Navigation Bar Styling */
 .navbar {
-  background-color: var(--deep-navy); /* Same background as the header */
-  color: var(--white); /* White text */
-  border-bottom: 2px solid var(--orange-accent); /* Optional border for emphasis */
+  background-color: transparent; /* Or keep your desired background */
+  border-bottom: none; /* Remove border from the navbar */
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* Link Styling */
 .nav-link {
-  color: var(--white); /* White text for links */
+  color: var(--orange-accent); /* White text for links */
   text-decoration: none;
   font-size: 1rem;
   padding: 0.5rem 1rem;
@@ -159,7 +199,7 @@ a:hover {
 }
 
 .nav-link:hover {
-  color: var(--orange-accent); /* Orange color on hover */
+  color: var(--white); /* Orange color on hover */
   transform: scale(1.05);
 }
 
@@ -174,11 +214,11 @@ a:hover {
 /* Light Mode Navigation */
 .navbar-light {
   background-color: var(--light-gray);
-  color: var(--black);
+  color: var(--orange-accent);
 }
 
 .navbar-light .nav-link {
-  color: var(--black);
+  color: var(--orange-accent);
 }
 
 .navbar-light .nav-link:hover {
@@ -188,19 +228,16 @@ a:hover {
 /* Dark Mode Navigation */
 .navbar-dark {
   background-color: var(--deep-navy);
-  color: var(--white);
+  color: var(--orange-accent);
 }
 
 .navbar-dark .nav-link {
-  color: var(--white);
+  color: var(--orange-accent);
 }
 
 .navbar-dark .nav-link:hover {
   color: var(--orange-accent);
 }
-
-
-/* src/App.css */
 
 /* Light Mode Footer */
 .footer-light {
