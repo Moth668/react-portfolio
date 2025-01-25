@@ -2,8 +2,12 @@
 import React from "react";
 import Navigation from "./Navigation";
 import { useTheme } from "../context/ThemeContext";
+interface HeaderProps {
+  isDarkMode: boolean;
+  toggleDarkMode: () => void;
+}
 
-const Header: React.FC = () => {
+const Header: React.FC<HeaderProps> = ({isDarkMode, toggleDarkMode}) => {
   const { theme } = useTheme();
 
   return (
@@ -13,15 +17,11 @@ const Header: React.FC = () => {
       }`}
     >
       <Navigation />
-      {/* <button
-        className={`btn ${
-          theme === "light" ? "btn-theme-light" : "btn-theme-dark"
-        }`}
-        onClick={toggleTheme}
-      >
-        {theme === "light" ? "Tim Rice." : "Tim Rice."}
-      </button> */}
-
+      <h1>{isDarkMode ? "Dark Theme" : "Light Theme"}</h1>
+      <div className={isDarkMode ? "Dark Theme" : "Light Theme"} onChange={toggleDarkMode}>
+        <input id="toggle" type="checkbox" checked={isDarkMode}/> 
+        <label htmlFor="toggle" className="slider"></label>
+      </div>
       <a
         href="/Tim_Rice_Resume.pdf"
         className="btn btn-primary mt-3 mb-3"

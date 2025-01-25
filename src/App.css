@@ -7,6 +7,8 @@
   --white: #ffffff;
 }
 
+
+
 /* src/App.css */
 body, .header-light, .header-dark, .btn-theme-light, .btn-theme-dark {
   transition: background-color 0.3s, color 0.3s;
@@ -289,4 +291,68 @@ a:hover {
   object-fit: cover;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+}
+
+:root {
+  --bg-light: #ffffff;
+  --bg-dark: #1a1a1a;
+  --slider-light: #f0f0f0;
+  --slider-dark: #333333;
+  --toggle-light: #ffd700;
+  --toggle-dark: #00d1b2;
+}
+
+/* body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-light);
+  color: var(--bg-dark);
+  transition: background-color 0.3s ease, color 0.3s ease;
+} */
+
+/* body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--bg-light);
+} */
+
+.theme-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.slider {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: var(--slider-light);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--toggle-light);
+  border-radius: 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="checkbox"]:checked + .slider {
+  background-color: var(--slider-dark);
+}
+
+input[type="checkbox"]:checked + .slider::before {
+  transform: translateX(30px);
+  background-color: var(--toggle-dark);
 }
