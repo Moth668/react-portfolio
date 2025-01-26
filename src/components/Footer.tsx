@@ -43,10 +43,7 @@ const Footer: React.FC = () => {
           </a>
         </li>
         <li className="list-inline-item">
-          <a
-            href="https://www.youtube.com/@moth668"
-            className="contact-link"
-          >
+          <a href="https://www.youtube.com/@moth668" className="contact-link">
             YouTube
           </a>
         </li>

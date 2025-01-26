@@ -73,7 +73,7 @@ const Weather: React.FC = () => {
   return (
     <div
       className="container mt-5 pb-5 rounded"
-      style={{ backgroundColor: "var(--light-gray)" }}
+      // style={{ backgroundColor: "var(--light-gray)" }}
     >
       <h2
         className="display-4 text-center mb-4"
