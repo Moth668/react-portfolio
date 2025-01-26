@@ -7,10 +7,12 @@
   --white: #ffffff;
 }
 
-
-
 /* src/App.css */
-body, .header-light, .header-dark, .btn-theme-light, .btn-theme-dark {
+body,
+.header-light,
+.header-dark,
+.btn-theme-light,
+.btn-theme-dark {
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -21,7 +23,7 @@ html,
 body {
   height: 100%;
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
 
 #root {
@@ -31,10 +33,10 @@ body {
 }
 
 /* Main content area should grow to fill available space */
-.main-content {
-  flex: 1;
-  padding-bottom: 3rem; 
-}
+/* .main-content {
+  flex: 5;
+  padding-bottom: 1rem;
+} */
 
 /* Footer styling */
 .footer {
@@ -45,17 +47,16 @@ body {
   background-color: var(--deep-navy); /* Adjust for your theme */
   color: var(--white);
   border-top: 2px solid var(--orange-accent); /* Accent border for styling */
-  padding: 1rem;
+  padding: 5rem;
   z-index: 1000; /* Keeps the footer on top of other content */
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
-
 
 /* Existing styles */
 body {
   background-color: var(--light-gray);
   color: var(--deep-navy);
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 /* Additional styles */
@@ -82,60 +83,59 @@ a:hover {
 
 /* Rest of your Portfolio styles... */
 
-
 /* src/styles/Portfolio.css */
 .portfolio {
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .project-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-  }
-  
-  .project {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1rem;
-    max-width: 300px;
-    text-align: left;
-    transition: transform 0.2s;
-  }
-  
-  .project:hover {
-    transform: scale(1.05);
-  }
-  
-  .project-image {
-    width: 100%;
-    border-radius: 4px;
-  }
-  
-  .project-title {
-    font-size: 1.5rem;
-    margin: 0.5rem 0;
-  }
-  
-  .project-description {
-    font-size: 1rem;
-    color: #555;
-  }
-  
-  .project-link {
-    display: inline-block;
-    margin-top: 1rem;
-    color: var(--orange-accent);
-    text-decoration: none;
-  }
-  
-  .project-link:hover {
-    text-decoration: underline;
-  }
+  padding: 2rem;
+  text-align: center;
+}
 
-  /* src/App.css */
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.project {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  max-width: 300px;
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+.project-image {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--orange-accent);
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* src/App.css */
 .header-light {
   background-color: var(--light-gray);
   color: var(--orange-accent);
@@ -163,22 +163,39 @@ a:hover {
 /* src/App.css */
 
 /* Override Bootstrap Button Styles */
-.btn, .btn-primary, .btn-secondary, .btn-success, .btn-danger, .btn-warning, .btn-info, .btn-light, .btn-dark {
-  background-color: var(--orange-accent) !important; /* Custom orange background */
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-success,
+.btn-danger,
+.btn-warning,
+.btn-info,
+.btn-light,
+.btn-dark {
+  background-color: var(
+    --orange-accent
+  ) !important; /* Custom orange background */
   color: var(--deep-navy) !important; /* White text */
   border: none !important; /* Remove default borders */
-  padding: 0.5rem 1rem; /* Adjust padding for consistency */
+  padding: 1rem 3rem; /* Adjust padding for consistency */
   border-radius: 5px; /* Rounded corners for a modern look */
   cursor: pointer; /* Pointer cursor on hover */
   transition: background-color 0.3s; /* Smooth transition for hover */
 }
 
-.btn:hover, .btn-primary:hover, .btn-secondary:hover, .btn-success:hover, .btn-danger:hover, .btn-warning:hover, .btn-info:hover, .btn-light:hover, .btn-dark:hover {
+.btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-success:hover,
+.btn-danger:hover,
+.btn-warning:hover,
+.btn-info:hover,
+.btn-light:hover,
+.btn-dark:hover {
   background-color: var(--deep-navy) !important; /* Deep navy on hover */
   color: var(--white) !important; /* Keep text white */
   transform: scale(1.05);
 }
-
 
 /* src/App.css */
 
@@ -209,7 +226,7 @@ a:hover {
   border-bottom: 2px solid var(--orange-accent); /* Underline to indicate active tab */
 }
 
-  /* src/App.css */
+/* src/App.css */
 
 /* Light Mode Navigation */
 .navbar-light {
@@ -263,7 +280,9 @@ a:hover {
 }
 
 .contact-link:hover {
-  color: var(--white); /* Change to white or another contrasting color for better visibility */
+  color: var(
+    --white
+  ); /* Change to white or another contrasting color for better visibility */
   text-decoration: underline;
 }
 
@@ -302,7 +321,6 @@ a:hover {
   font-size: 1rem;
 }
 
-
 /* src/App.css */
 
 /* Project card styling */
@@ -335,22 +353,9 @@ a:hover {
   --bg-dark: #1a1a1a;
   --slider-light: #f0f0f0;
   --slider-dark: #333333;
-  --toggle-light: #ffd700;
-  --toggle-dark: #00d1b2;
+  --toggle-light: #14213d;
+  --toggle-dark: #fca311;
 }
-
-/* body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--bg-light);
-  color: var(--bg-dark);
-  transition: background-color 0.3s ease, color 0.3s ease;
-} */
-
-/* body.dark-mode {
-  background-color: var(--bg-dark);
-  color: var(--bg-light);
-} */
 
 .theme-toggle {
   display: flex;

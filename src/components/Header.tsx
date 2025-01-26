@@ -7,7 +7,7 @@ interface HeaderProps {
   toggleDarkMode: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({isDarkMode, toggleDarkMode}) => {
+const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleDarkMode }) => {
   const { theme } = useTheme();
 
   return (
@@ -17,9 +17,12 @@ const Header: React.FC<HeaderProps> = ({isDarkMode, toggleDarkMode}) => {
       }`}
     >
       <Navigation />
-      <h1>{isDarkMode ? "Dark Theme" : "Light Theme"}</h1>
-      <div className={isDarkMode ? "Dark Theme" : "Light Theme"} onChange={toggleDarkMode}>
-        <input id="toggle" type="checkbox" checked={isDarkMode}/> 
+      <h1>{isDarkMode ? "" : ""}</h1>
+      <div
+        className={isDarkMode ? "Dark Theme" : "Light Theme"}
+        onChange={toggleDarkMode}
+      >
+        <input id="toggle" type="checkbox" checked={isDarkMode} />
         <label htmlFor="toggle" className="slider"></label>
       </div>
       <a

@@ -1,18 +1,15 @@
 // adding styling to contact
 import React from "react";
-import { useTheme } from "../context/ThemeContext";
 
-function Contact() {
-  const { theme } = useTheme();
-
+const Contact: React.FC = () => {
   return (
     <div
       className="container mt-5 p-4 pb-5 rounded"
-      style={{
-        backgroundColor:
-          theme === "light" ? "var(--light-gray)" : "var(--deep-navy)",
-        color: theme === "light" ? "var(--deep-navy)" : "var(--white)",
-      }}
+      // style={{
+      //   backgroundColor:
+      //     theme === "light" ? "var(--light-gray)" : "var(--deep-navy)",
+      //   color: theme === "light" ? "var(--deep-navy)" : "var(--white)",
+      // }}
     >
       <h1 className="display-4 text-center mb-4">Get in Touch</h1>
       <p className="lead text-center">
@@ -22,7 +19,6 @@ function Contact() {
       </p>
       <div className="text-center mt-4">
         <p>
-
           <strong>Email:</strong>{" "}
           <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=timothydavidrice@gmail.com&su=Portfolio%20Inquiry&body=Hi,%20I%20am%20impressed%20with%20your%20work!"
@@ -54,8 +50,8 @@ function Contact() {
           >
             github.com/Moth668
           </a>
-          </p>
-          <p>
+        </p>
+        <p>
           <strong>YouTube: </strong>{" "}
           <a
             href="https://www.youtube.com/@moth668"
@@ -73,6 +69,6 @@ function Contact() {
       </p>
     </div>
   );
-}
+};
 
 export default Contact;
