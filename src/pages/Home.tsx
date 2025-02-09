@@ -41,7 +41,7 @@ const Home: React.FC = () => {
         reach out to me if you would like to connect or collaborate.
       </p>
       <p className="text" id="machine">
-        I sourced all individual parts, and built my machine myself at home. Here's some specs:
+        I sourced all individual parts, and built my machine at home. Here's some specs:
         <ul>
           <li>Motherboard: MSI Tomahawk B550</li>
           <li>CPU: AMD Ryzen 5 3600 6-Core Processor 3.60 GHz</li>
