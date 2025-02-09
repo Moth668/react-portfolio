@@ -283,7 +283,7 @@ a:hover {
   color: var(
     --white
   ); /* Change to white or another contrasting color for better visibility */
-  text-decoration: underline;
+  transform: scale(1.05);
 }
 
 /* src/App.css */
@@ -297,7 +297,7 @@ a:hover {
 
 .footer .contact-link:hover {
   color: var(--white); /* White color on hover */
-  text-decoration: underline; /* Underline on hover for emphasis */
+  transform: scale(1.05);
 }
 
 /* src/App.css */
@@ -397,4 +397,10 @@ input[type="checkbox"]:checked + .slider {
 input[type="checkbox"]:checked + .slider::before {
   transform: translateX(30px);
   background-color: var(--toggle-dark);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }

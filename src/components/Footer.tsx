@@ -1,6 +1,18 @@
 // src/components/Footer.tsx
 import React from "react";
 import { useTheme } from "../context/ThemeContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faDev } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+
+const gitHub = <FontAwesomeIcon icon={faGithub} />;
+const dev = <FontAwesomeIcon icon={faDev} />;
+const email = <FontAwesomeIcon icon={faEnvelope} />;
+const linkedIn = <FontAwesomeIcon icon={faLinkedin} />;
+const youtube = <FontAwesomeIcon icon={faYoutube} />;
 
 const Footer: React.FC = () => {
   const { theme } = useTheme();
@@ -16,12 +28,12 @@ const Footer: React.FC = () => {
             href="https://github.com/Moth668/react-portfolio"
             className="contact-link"
           >
-            GitHub
+            {gitHub}
           </a>
         </li>
         <li className="list-inline-item">
           <a href="https://dev.to/moth668" className="contact-link">
-            DEV
+            {dev}
           </a>
         </li>
         <li className="list-inline-item">
@@ -31,7 +43,7 @@ const Footer: React.FC = () => {
             rel="noopener noreferrer"
             className="contact-link"
           >
-            Email
+            {email}
           </a>
         </li>
         <li className="list-inline-item">
@@ -39,12 +51,12 @@ const Footer: React.FC = () => {
             href="https://www.linkedin.com/in/timothydavidrice/"
             className="contact-link"
           >
-            LinkedIn
+            {linkedIn}
           </a>
         </li>
         <li className="list-inline-item">
           <a href="https://www.youtube.com/@moth668" className="contact-link">
-            YouTube
+            {youtube}
           </a>
         </li>
       </ul>
