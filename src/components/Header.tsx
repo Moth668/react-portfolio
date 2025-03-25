@@ -26,9 +26,9 @@ const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleDarkMode }) => {
         <label htmlFor="toggle" className="slider"></label>
       </div>
       <a
-        href="/Tim_Rice_Resume.pdf"
+        href="/Timothy_Rice_Resume.pdf"
         className="btn btn-primary mt-3 mb-3"
-        download="Tim_Rice_Resume.pdf"
+        download="Timothy_Rice_Resume.pdf"
       >
         Download My Resume
       </a>
