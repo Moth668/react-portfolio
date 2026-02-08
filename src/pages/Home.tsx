@@ -25,6 +25,10 @@ const Home: React.FC = () => {
           expanding my knowledge and preparing me for the world of technology.
         </p>
         <p className="lead text-center">
+          I am currently enrolled in WGU pursuing Bachelor of Science, Software
+          Engineering.
+        </p>
+        <p className="lead text-center">
           Whether I am collaborating with a team or diving into a solo project,
           I bring a commitment to excellence, a keen eye for detail. I posess an
           eagerness to continuously grow, learn, and adapt in this ever-evolving
@@ -35,36 +39,49 @@ const Home: React.FC = () => {
           looking forward to the opportunities that lie ahead. Please feel free
           to reach out to me if you would like to connect or collaborate.
         </p>
-        <section className="hardware">
-        <p className="text" id="machine1">
-          I sourced all individual parts, and built my machine at home. Here's
-          some specs:
+        <section className="hardware text-center">
+          <h2>Hardware</h2>
           <ul>
-            <li>Motherboard: MSI Tomahawk B550</li>
-            <li>CPU: AMD Ryzen 5 3600 6-Core Processor 3.60 GHz</li>
-            <li>RAM: 32 GB (Corsair Vengeance RGB PRO)</li>
-            <li>Windows 10 Home</li>
-            <li>1TB SSD</li>
-            <li>GPU: NVIDIA GeForce RTX2080</li>
-            <li>Keyboard: Corsair K60 RGB PRO SE</li>
-            <li>Mouse: Corsair Harpoon RGB</li>
+            <li>
+              <h3>PC</h3>
+              <p className="text" id="machine1">
+                I sourced all individual parts, and built my machine at home.
+                Here's some specs:
+                <ul>
+                  <li>Motherboard: MSI Tomahawk B550</li>
+                  <li>CPU: AMD Ryzen 5 3600 6-Core Processor 3.60 GHz</li>
+                  <li>RAM: 32 GB (Corsair Vengeance RGB PRO)</li>
+                  <li>Windows 10 Home</li>
+                  <li>1TB SSD</li>
+                  <li>GPU: NVIDIA GeForce RTX2080</li>
+                  <li>Keyboard: Corsair K60 RGB PRO SE</li>
+                  <li>Mouse: Corsair Harpoon RGB</li>
+                </ul>
+              </p>
+            </li>
+            <li>
+              <h3>MacBook</h3>
+              <p className="text" id="machine2">
+                <ul>
+                  <li>14" MacBook Pro (November 2024)</li>
+                  <li>Chip: Apple M4</li>
+                  <li>macOS Sequoia Version 15.7.4</li>
+                  <li>Built-in Liquid Retina XDR Display</li>
+                  <li>Memory: 24GB</li>
+                  <li>Storage: 1TB</li>
+                </ul>
+              </p>
+            </li>
           </ul>
-        </p>
-        <p className="text" id="machine2">
-          <ul>
-            <li>14" MacBook Pro (November 2024)</li>
-            <li>Chip: Apple M4</li>
-            <li>macOS Sequoia Version 15.7.4</li>
-            <li>Built-in Liquid Retina XDR Display</li>
-            <li>Memory: 24GB</li>
-            <li>Storage: 1TB</li>
-          </ul>
-        </p>
         </section>
-        My list of skills includes, but is not limited to, these software tools:
       </div>
 
-      <section className="section">
+      <section className="section text-center">
+        <h2>Software</h2>
+        <p>
+          My list of skills includes, but is not limited to, these software
+          tools:
+        </p>
         <div className="container">
           <div className="card-grid" role="list">
             <a
