@@ -13,7 +13,9 @@ body,
 .header-dark,
 .btn-theme-light,
 .btn-theme-dark {
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 /* src/App.css */
@@ -140,14 +142,18 @@ a:hover {
   background-color: var(--light-gray);
   color: var(--orange-accent);
   border-bottom: 2px solid var(--orange-accent);
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 .header-dark {
   background-color: var(--deep-navy);
   color: var(--orange-accent);
   border-bottom: 2px solid var(--orange-accent);
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 .btn-theme-light {
@@ -203,7 +209,9 @@ a:hover {
 .navbar {
   background-color: transparent; /* Or keep your desired background */
   border-bottom: none; /* Remove border from the navbar */
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 /* Link Styling */
@@ -212,7 +220,9 @@ a:hover {
   text-decoration: none;
   font-size: 1rem;
   padding: 0.5rem 1rem;
-  transition: color 0.3s, border-bottom 0.3s;
+  transition:
+    color 0.3s,
+    border-bottom 0.3s;
 }
 
 .nav-link:hover {
@@ -387,7 +397,9 @@ input[type="checkbox"] {
   height: 20px;
   background-color: var(--toggle-light);
   border-radius: 50%;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
 }
 
 input[type="checkbox"]:checked + .slider {
@@ -403,4 +415,48 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+/* --- Service Cards Grid --- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* --- Individual Service Card Styling --- */
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--white);
+  color: var(--deep-navy);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-card img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.service-card span {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--deep-navy);
 }
