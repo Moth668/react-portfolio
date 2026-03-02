@@ -1,22 +1,28 @@
-// src/components/Navigation.tsx
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
+import { Link as ScrollLink } from "react-scroll";
+import { NavLink } from "react-router-dom";
 
 const Navigation: React.FC = () => {
   const { theme } = useTheme();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHomePage = location.pathname === "/";
+
+  const scrollItems = [
+    { id: "home", label: "Home" },
+    { id: "about", label: "About" },
+    { id: "portfolio", label: "Portfolio" },
+    { id: "contact", label: "Contact" },
+  ];
 
   return (
     <nav
-      className={`navbar navbar-expand-lg ${
-        theme === "light" ? "header-light" : "header-dark"
-      }`}
+      className={`navbar navbar-expand-lg ${theme === "light" ? "header-light" : "header-dark"}`}
     >
-      {/* Hamburger menu button */}
       <button
-        className={`navbar-toggler ${
-          theme === "light" ? "navbar-light bg-light" : "navbar-dark bg-dark"
-        }`}
+        className={`navbar-toggler ${theme === "light" ? "navbar-light bg-light" : "navbar-dark bg-dark"}`}
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarNav"
@@ -27,49 +33,36 @@ const Navigation: React.FC = () => {
         <span className="navbar-toggler-icon"></span>
       </button>
 
-      {/* Collapsible content */}
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
-          <li className="nav-item">
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                isActive ? "nav-link active-link" : "nav-link"
-              }
-            >
-              Home
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                isActive ? "nav-link active-link" : "nav-link"
-              }
-            >
-              About
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink
-              to="/portfolio"
-              className={({ isActive }) =>
-                isActive ? "nav-link active-link" : "nav-link"
-              }
-            >
-              Portfolio
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                isActive ? "nav-link active-link" : "nav-link"
-              }
-            >
-              Contact
-            </NavLink>
-          </li>
+          {scrollItems.map(({ id, label }) =>
+            isHomePage ? (
+              <li className="nav-item" key={id}>
+                <ScrollLink
+                  to={id}
+                  smooth={true}
+                  duration={500}
+                  offset={-70}
+                  spy={true}
+                  activeClass="active-link"
+                  className="nav-link"
+                >
+                  {label}
+                </ScrollLink>
+              </li>
+            ) : (
+              <li className="nav-item" key={id}>
+                <span
+                  className="nav-link"
+                  style={{ cursor: "pointer" }}
+                  onClick={() => navigate("/")}
+                >
+                  {label}
+                </span>
+              </li>
+            ),
+          )}
+          {/* Keep Weather as traditional route */}
           <li className="nav-item">
             <NavLink
               to="/weather"

@@ -2,6 +2,7 @@ import React from "react";
 
 const About: React.FC = () => {
   return (
+    <div id="about" style={{ height: '100vh', paddingTop: '80px' }}>
     <section className="container my-5 pb-5">
       <div className="row">
         <div className="col-md-6">
@@ -44,6 +45,7 @@ const About: React.FC = () => {
         </div>
       </div>
     </section>
+    </div>
   );
 };
 

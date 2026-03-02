@@ -20,7 +20,7 @@ const Weather: React.FC = () => {
     const fetchCoordinatesAndWeather = async () => {
       if (!API_KEY) {
         setError(
-          "API Key is missing. Please check your environment variables."
+          "API Key is missing. Please check your environment variables.",
         );
         return;
       }
@@ -28,7 +28,7 @@ const Weather: React.FC = () => {
       try {
         // Fetch coordinates from the Geocoding API
         const geoResponse = await axios.get(
-          `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${API_KEY}`
+          `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${API_KEY}`,
         );
 
         if (geoResponse.data.length === 0) {
@@ -40,7 +40,7 @@ const Weather: React.FC = () => {
 
         // Fetch weather data using the coordinates
         const weatherResponse = await axios.get(
-          `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`
+          `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`,
         );
 
         const forecastData = weatherResponse.data.list
@@ -55,14 +55,14 @@ const Weather: React.FC = () => {
               temperature: item.main.temp * (9 / 5) + 32, // Convert to Fahrenheit
               description: item.weather[0].description,
               icon: `http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`,
-            })
+            }),
           );
 
         setForecast(forecastData);
         setError(null);
       } catch (err) {
         setError(
-          "Failed to fetch weather data. Please check the city name and try again."
+          "Failed to fetch weather data. Please check the city name and try again.",
         );
       }
     };

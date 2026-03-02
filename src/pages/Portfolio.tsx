@@ -4,6 +4,7 @@ import Project from "../components/Project";
 
 const Portfolio: React.FC = () => {
   return (
+    <div id="portfolio" style={{ height: '100vh', paddingTop: '80px' }}>
     <section className="container my-5">
       <h2 className="text-center mb-5">My Projects</h2>
       <div className="row justify-content-center">
@@ -57,6 +58,7 @@ const Portfolio: React.FC = () => {
         </div>
       </div>
     </section>
+    </div>
   );
 };
 

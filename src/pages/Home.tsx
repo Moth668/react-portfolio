@@ -2,6 +2,7 @@ import React from "react";
 const Home: React.FC = () => {
   return (
     <>
+    <div id="home" style={{ height: '100vh', paddingTop: '80px' }}>
       <div className="main-content container mt-5 p-5 pb-5 rounded min-vh-100 d-flex flex-column justify-content-between">
         <h1 className="display-1 text-center mb-4">Timothy Rice</h1>
         <p className="lead text-center">
@@ -76,7 +77,7 @@ const Home: React.FC = () => {
         </section>
       </div>
 
-      <section className="section text-center">
+      {/* <section className="section text-center">
         <h2>Software</h2>
         <p>
           My list of skills includes, but is not limited to, these software
@@ -390,7 +391,8 @@ const Home: React.FC = () => {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
+      </div>
     </>
   );
 };

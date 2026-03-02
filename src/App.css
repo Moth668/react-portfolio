@@ -460,3 +460,13 @@ ul {
   font-size: 1.1rem;
   color: var(--deep-navy);
 }
+
+.navbar .nav-link {
+  color: white;
+  cursor: pointer;
+}
+
+.navbar .active-link {
+  border-bottom: 2px solid #00f0ff;
+  color: #00f0ff !important;
+}

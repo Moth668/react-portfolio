@@ -3,6 +3,7 @@ import React from "react";
 
 const Contact: React.FC = () => {
   return (
+    <div id="contact" style={{ height: '100vh', paddingTop: '80px' }}>
     <div
       className="container mt-5 p-4 pb-5 rounded"
       // style={{
@@ -67,6 +68,7 @@ const Contact: React.FC = () => {
         I look forward to hearing from you and exploring how we can work
         together!
       </p>
+    </div>
     </div>
   );
 };
